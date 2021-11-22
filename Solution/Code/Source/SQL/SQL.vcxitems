@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{259b50d1-f760-4b91-9acd-af5c782d5c8e}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Create_Analytic_Algo.sql" />
+    <None Include="$(MSBuildThisFileDirectory)Create_Analytic_Seq_Algo.sql" />
+    <None Include="$(MSBuildThisFileDirectory)Create_sp_insert_position_rec.sql" />
+    <None Include="$(MSBuildThisFileDirectory)Create_WatchPool.sql" />
+    <None Include="$(MSBuildThisFileDirectory)Create_sp_get_position_recs.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Create_seq_watchpool_sequence.sql" />
+  </ItemGroup>
+</Project>

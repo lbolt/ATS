@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{6e5c8818-289e-4be5-a5e1-6bf0abad8b92}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\AnalyticX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\CommonX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\DataLoggerX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\ExceptionX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\LoggerX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\NumnericX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\ParseArgsX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\PropsX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\QueueMgrX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\RdbX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\SafeSyncX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\StringX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\StructX.lib" />
+    <Library Include="$(MSBuildThisFileDirectory)..\..\..\Lib\ThreadMgrX.lib" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{0f758a57-6793-44e7-90a4-1a6b208599a6}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)AnalyticX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ATS_CODES.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ATS_CONST_CODES.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ATS_Defines.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CircularBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)DataLoggerX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ExceptionX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)LoggerX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)NumnericX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ParseArgsX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)PropsX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)QueueMgrX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)RdbX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)SafeSyncX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)StringX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)StructX.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ThreadMgrX.h" />
+  </ItemGroup>
+</Project>

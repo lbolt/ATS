@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{580D7125-B4B6-4D70-A36F-B0A40EE06F65}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DataService</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="..\Utils\Includes\Includes.vcxitems" Label="Shared" />
+    <Import Project="..\Utils\Lib\Lib.vcxitems" Label="Shared" />
+    <Import Project="..\..\Lib\AT\Lib\Lib.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\Source\AT\ActiveTickServerAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>XmlLite.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AT_Commands.h" />
+    <ClInclude Include="AT_Helper.h" />
+    <ClInclude Include="AT_Streamer.h" />
+    <ClInclude Include="DataAnalyticsWorker.h" />
+    <ClInclude Include="DataAnalytics.h" />
+    <ClInclude Include="DataFileConnector.h" />
+    <ClInclude Include="DataManagerDBMgr.h" />
+    <ClInclude Include="DataSecurityStructs.h" />
+    <ClInclude Include="DataCollector.h" />
+    <ClInclude Include="DataCollectorWorker.h" />
+    <ClInclude Include="DataConnector.h" />
+    <ClInclude Include="DataManager.h" />
+    <ClInclude Include="DataManagerDB.h" />
+    <ClInclude Include="DataService.h" />
+    <ClInclude Include="DataServiceUtilityMgr.h" />
+    <ClInclude Include="DS_Shared.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AT_Commands.cpp" />
+    <ClCompile Include="AT_Helper.cpp" />
+    <ClCompile Include="AT_Streamer.cpp" />
+    <ClCompile Include="DataAnalyticsWorker.cpp" />
+    <ClCompile Include="DataAnalytics.cpp" />
+    <ClCompile Include="DataCollector.cpp" />
+    <ClCompile Include="DataCollectorWorker.cpp" />
+    <ClCompile Include="DataConnector.cpp" />
+    <ClCompile Include="DataFileConnector.cpp" />
+    <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="DataManagerDB.cpp" />
+    <ClCompile Include="DataManagerDBMgr.cpp" />
+    <ClCompile Include="DataService.cpp" />
+    <ClCompile Include="DataServiceUtilityMgr.cpp" />
+    <ClCompile Include="DS_Shared.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\AnalyticX\AnalyticX.vcxproj">
+      <Project>{0430fee8-eea0-447b-8788-aed57364bc89}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\CommonX\CommonX.vcxproj">
+      <Project>{593423ee-d006-43dd-b839-5e3058c97ec0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\ExceptionX\ExceptionX.vcxproj">
+      <Project>{58f5e5d6-9705-4b32-9a9e-636b112783f4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\LoggerX\LoggerX.vcxproj">
+      <Project>{8598adcb-91ea-411f-b490-1ef53d754f10}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\NumnericX\NumnericX.vcxproj">
+      <Project>{6abf22d7-f804-44ca-8314-91df4d1eb30f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\ParseArgsX\ParseArgsX.vcxproj">
+      <Project>{b5e84e46-aa0d-4f8a-9688-3aafae1cf3ea}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\PropsX\PropsX.vcxproj">
+      <Project>{9b250e0a-9fa3-48a9-8b8d-ea600fdbfed6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\QueueMgrX\QueueMgrX.vcxproj">
+      <Project>{e967bff1-2c08-460c-a7df-f03557c05816}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\RdbX\RdbX.vcxproj">
+      <Project>{0b1b78d1-47d3-4a9f-8d02-d112a7bbc5b0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\SafeSyncX\SafeSyncX.vcxproj">
+      <Project>{89f4827a-fd5a-43fa-a253-9871344792b8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\StringX\StringX.vcxproj">
+      <Project>{111c159b-e4ef-46a9-8d1b-d0f48ec4f3d5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\ThreadMgrX\ThreadMgrX.vcxproj">
+      <Project>{bf7566e3-d6b2-415e-b3ce-6844ca5e1b5e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
